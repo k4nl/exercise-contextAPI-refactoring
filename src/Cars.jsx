@@ -55,6 +55,17 @@ class Cars extends Component {
   }
 };
 
+<<<<<<< HEAD
 Cars.contextType = CarsContext;
 
 export default Cars;
+=======
+const mapStateToProps = (state) => ({
+  redCar: state.carReducer.cars.red,
+  blueCar: state.carReducer.cars.blue,
+  yellowCar: state.carReducer.cars.yellow});
+
+const mapDispatchToProps = { moveCar };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cars);
+>>>>>>> d767d69cfbc747526e347b0dce69183ca7a9fc1b
